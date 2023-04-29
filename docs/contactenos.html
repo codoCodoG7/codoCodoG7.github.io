@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Multi Browsers Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#b90000">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!--Multi Browsers Icons-->
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- cloudflare turnstile is like a captcha -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+    <script src="/js/contacto.js" async defer></script>
+    <title>Contactenos - Kustom Burgers</title>
+</head>
+<body>
+    <header>
+        <div class="column">
+            <nav id="mainNav">
+                <!-- Hamburger icon -->
+                <input class="mobile-menu" type="checkbox" id="mobile-menu" >
+                <label class="hamb" for="mobile-menu"><span class="hamb-button"></span></label>
+                <!-- Menu -->
+                <div id="navigation-container">
+                    <ul class="menu m-left">
+                        <li><a href="/nosotros.html">Nosotros</a></li>
+                        <li><a href="/info.html">Info</a></li>
+                        <li><a href="/menu.html">Menú</a>
+                            <ul class="sub-menu">
+                                    <li><a href="/menu-premium.html">Premium</a></li>
+                                    <li><a href="/menu-classic.html">Clásicas</a></li>
+                                    <li><a href="/menu-extras.html">Extras</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    <ul class="menu m-right">
+                        <li class="activePage"><a href="/contactenos.html">Contactenos</a></li>
+                         <!-- <li><a href="#">Promos</a></li> -->
+                    </ul>
+                </div>
+                <a class="logo" href="/"><img src="/images/kustom_logo.png" alt="Kustom Burgers" width="250"></a>
+            </nav>
+            <div class="row">
+                <div class="big-title centered columns">
+                    <h1 class="pattern">Contactenos</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="contactFormPage">
+        <div class="columnCentered">
+            <aside>
+                <h2>Nuestro equipo está listo</h2>
+                <div class="separatorLine customRed"><i class='bx bxs-star'></i></div>
+                <div class="details">
+                    <p>Kustom Burger no solo la hamburguesa premium que estableció un estándar para la calidad de las
+                        hamburguesas. En Kustom Burger estamos para acompañar tus momentos.</p>
+                    <p>Comunícate con nuestro equipo y recibirás una respuesta <span class="italic">Kustom</span> a la
+                        brevedad.</p>
+                </div>
+                <div class="listingProperties ">
+                    <ul>
+                        <li><a href="tel:+11-111-333-1234" target="_blank"><i class='bx bxs-phone-call'></i>
+                                <p>11-111-333-1234</p>
+                            </a></li>
+                        <li><a href="https://wa.me/549111113331234" target="_blank"><i
+                                    class='bx bxl-whatsapp-square'></i>
+                                <p>+54 9 11-111-333-1234</p>
+                            </a></li>
+                        <li> <a href="mailto:consultas@kustomburger.com" target="_blank"><i class='bx bxs-envelope'></i>
+                                <p>consultas@kustomburger.com</p>
+                            </a></li>
+                        <li>
+                            <div class="map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.0224927016907!2d-58.26973419032255!3d-34.8053759680602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a329685bde1065%3A0x24c9cb17f03d7c23!2sArist%C3%B3bulo%20del%20Valle%20737%2C%20B1888%20IKO%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1680619653373!5m2!1ses-419!2sar"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <section class='rotation'>
+                <div class="frontFace">
+                    <form action="#" id="contactForm">
+                        <div class="formRow">
+                            <label for="cName">Nombre *</label>
+                            <input type="text" id="cName" name="name" required data-valType="NotEmpty"
+                                data-tooltip="No debe estar vacío">
+                        </div>
+                        <div class="formRow">
+                            <label for="cEmail">Email *</label>
+                            <input type="email" id="cEmail" name="email" placeholder="suemail@dominio.com" required
+                                data-valType="Email" data-tooltip="Email válido">
+                        </div>
+                        <div class="formRow">
+                            <label for="cPhone">Telefono</label>
+                            <input type="text" id="cPhone" name="phone" data-valType="Phone"
+                                data-tooltip="Formatos validos: (123x) 456-7890xx (123x)456-7890xx 123x-456-7890xx 123x4567890xx">
+                        </div>
+                        <div class="formRow">
+                            <label for="cQuestion">Su consulta *</label>
+                            <textarea name="question" id="cQuestion" cols="30" rows="10" required
+                                data-valType="NotEmpty" maxlength="1024"
+                                data-tooltip="No puede superar los 1024 caracteres"></textarea>
+                        </div>
+                        <div class="formRow">
+                            <label for="cTerms">Acepto los términos y condiciones</label>
+                            <input type="checkbox" name="terms" id="cTerms" required data-valType="bool" value="1"
+                                data-tooltip="Debe aceptar los terminos y condiciones">
+                        </div>
+                        <div class="formRow">
+                            <i>* campos requeridos</i>
+                            <input type="button" class="customRed sendButton" id="sendContactForm" value="Enviar Consulta"><i
+                                class='bx bx-loader-alt bx-spin customRed'></i>
+                        </div>
+                        <div class="tWidget" id="tWidget" data-sitekey="" data-callback="javascriptCallback"></div>
+                    </form>
+                </div>
+                <div class="backFace">
+                    <h3>Hemos recibido su mensaje</h3>
+                    <div class="separatorLine customRed"><i class='bx bxs-star'></i></div>
+                    <div class="details">
+                        <p>Haremos todo lo posible para responder a tu mensaje en el menor tiempo posible. Si tu
+                            consulta requiere una respuesta inmediata, por favor,
+                            no dudes en llamarnos al <a href="tel:+11-111-333-1234" target="_blank">11-111-333-1234</a>
+                            durante nuestro horario de atención.</p>
+                        <p>Nos encanta recibir comentarios de nuestros clientes, así que si tienes alguna sugerencia o
+                            comentario sobre nuestro sitio web o nuestros productos/servicios, por favor, háznoslo
+                            saber.</p>
+                        <p>Gracias por tu interés en nuestra empresa. Esperamos poder servirte pronto.</p>
+                        <p>Atentamente, el equipo de Kustom Burger</p>
+
+                        <input type="button" class="customBlue sendButton" id="sendOtherContactForm" value="Enviar Otra Consulta">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="fullWidth">
+            <div class="flexTitleText customRed">
+                <h2>Descubra Nuestro Menu</h2>
+                <a class="flexTitleLink" href="#">Detalles</a>
+            </div>
+            <div class="flexTitleText customBlue">
+                <h2>Nuestras Promociones</h2>
+                <a class="flexTitleLink" href="#">Detalles</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerNav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/nosotros.html">Nosotors</a>
+                    </li>
+                    <li>
+                        <a href="/info.html">Info</a>
+                    </li>
+
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/menu.html">Menu</a>
+                        <ul>
+                            <li><a href="/menu-premium.html">Premium</a></li>
+                            <li><a href="/menu-classic.html">Clásicas</a></li>
+                            <li><a href="/menu-extras.html">Extras</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/contactenos.html">Contactenos</a>
+                    </li>
+
+                     <!-- <li>
+                        <a href="#">Promos</a>
+                    </li> -->
+                </ul>
+            </nav>
+            <aside>
+                <h2>Social media</h2>
+                <ul>
+                    <li><a href="#" title="Instagram"><i class='bx bxl-instagram-alt'></i></a></li>
+                    <li><a href="#" title="Facebook"><i class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="#" title="Tik Tok"><i class='bx bxl-tiktok'></i></a></li>
+                    <li><a href="#" title="Twitter"><i class='bx bxl-twitter'></i></a></li>
+
+                    <li><a href="#" title="Email"><i class='bx bx-envelope'></i></a></li>
+                    <li><a href="#" title="Whatsapp"><i class='bx bxl-whatsapp'></i></a></li>
+                </ul>
+            </aside>
+        </div>
+        <p id="copyRight">&copy; <span>2023</span> Kustom Burguers. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

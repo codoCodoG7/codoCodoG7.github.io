@@ -343,17 +343,28 @@ main {
   flex: 50%;
 }
 
-.customBlue
- {
+.customBlue,
+#contactFormPage .customBlue:not(div.separatorLine),
+.customBlue.sendButton{
   background-color: #1e273f;
   color: #f1f1f1;
 }
 
-.customRed{
+.customRed,
+#contactFormPage .customRed:not(div.separatorLine):not(.bx.customRed){
   background-color: #b5121b;
   color: #f1f1f1;
 }
 
+#contactFormPage input[type="button"].customRed,
+#contactFormPage .sendButton {
+  cursor: pointer;
+}
+
+#contactFormPage input[type="button"].customRed:hover,
+#contactFormPage .sendButton:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+}
 
 .imgCBox {
   line-height: 0;
@@ -631,6 +642,8 @@ div.txtBox.customBlue .separatorLine::before {
   align-items: center;
 }
 
+
+
 .listingProperties ul li .bx {
   font-size: 4em;
   color: #b5121b;
@@ -639,7 +652,7 @@ div.txtBox.customBlue .separatorLine::before {
   align-items: center;
 }
 
-/*****NOsotros Custom Styles *********/
+/*****Nosotros Custom Styles *********/
 .nosBurger {
   background-image: url(../images/nosotros/nosotros_bg1.png);
   background-position-y: 100%;
@@ -698,6 +711,201 @@ div.txtBox.customBlue .separatorLine::before {
 .menuPageItems .fullWidth {
   display: flex;
   flex-direction: row;
+}
+
+#contactFormPage aside,
+#contactFormPage section,
+#infoPage .section {
+  padding: 15px;
+}
+#contactFormPage section.rotation, section#menuItems div.itemContainer.rotation {
+  position: relative;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -moz-transition: -moz-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+#contactFormPage section.rotation.active, section#menuItems div.itemContainer.rotation.active {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.frontFace,
+.backFace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frontFace {
+  position: relative;
+  z-index: 2;
+}
+
+.backFace {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  opacity: 0;
+  z-index: 1;
+  padding: 25px;
+}
+.backFace p {
+  padding: 15px 0;
+}
+.backFace a {
+  font-size: 1em;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+#contactFormPage section.rotation.active .backFace, section#menuItems div.itemContainer.rotation.active .backFace {
+  opacity: 1;
+}
+
+#contactFormPage aside {
+  flex-shrink: 3.5;
+  text-align: justify;
+  padding: 15px 25px;
+}
+
+#contactFormPage aside h3 {
+  text-align: center;
+}
+
+#contactFormPage .fullWidth,
+#infoPage .fullWidth,
+.menuPageItems .fullWidth {
+  padding: 0;
+}
+
+#contactFormPage .flexTitleText,
+#infoPage .flexTitleText,
+.menuPageItems .flexTitleText {
+  padding: 35px;
+  flex-grow: 1;
+}
+
+#contactFormPage input,
+#contactFormPage textarea {
+  background-color: #363636;
+  border: none;
+  border-radius: 30px;
+  box-shadow: none;
+  color: #f2f2f2;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 10px 12px;
+  width: 100%;
+  margin: 0 0 1.8em;
+}
+#contactFormPage input.error,
+#contactFormPage textarea.error {
+  box-shadow: inset 0 0 0 3px #b5121b;
+}
+
+#contactFormPage label {
+  font-size: 1.1em;
+}
+
+#contactFormPage form i {
+  padding: 0 0 10px 0;
+  display: block;
+}
+
+#contactFormPage .listingProperties ul li {
+  width: 100%;
+}
+
+#contactFormPage .listingProperties ul li a {
+  display: flex;
+  color: #000;
+  flex-direction: row;
+}
+
+#contactFormPage .map {
+  width: 100%;
+  padding: 10px 0;
+}
+
+#contactFormPage .map > iframe {
+  width: 100%;
+  /*height: 100%;*/
+  max-height: 350px;
+}
+
+input#cTerms {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#sendContactForm + i.bx {
+  display: none;
+  padding: 10px 12px;
+  width: 100%;
+  margin: 0 0 0.9em;
+  font-size: 2em;
+}
+
+#contactFormPage .bx.customRed {
+  color: #b5121b;
+  background-color: transparent;
+}
+
+.bx.customBlue {
+  color: #1e273f;
+  background-color: transparent;
+}
+.formRow {
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  background-color: #b5121b;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: none;
+  /* Position the tooltip below the input */
+  top: calc(100% - 25px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: transparent transparent #b5121b transparent;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip.textarea {
+  top: calc(100% - 30px);
+  left: 51%;
+}
+.tooltip.checkbox {
+  top: 60px;
+  left: 51%;
 }
 
 
@@ -897,7 +1105,11 @@ footer aside i.bx {
   .imgText_flex.fiftyFifty {
     flex-direction: column;
   }
-
+  #contactFormPage .columnCentered,
+  #contactFormPage .fullWidth
+  {
+    flex-direction: column;
+  }
 } 
 /*funciona desde los 576px*/
 @media only screen and (min-width: 576px) {
@@ -919,6 +1131,11 @@ footer aside i.bx {
 
   .imgText_flex.fiftyFifty {
     flex-direction: row;
+  }
+  #contactFormPage .columnCentered,
+  #contactFormPage .fullWidth
+   {
+    flex-direction: column;
   }
 }
 
@@ -956,6 +1173,13 @@ footer aside i.bx {
   .wideReversed {
     flex-direction: row-reverse;
   }
+  #contactFormPage .columnCentered {
+    flex-direction: column;
+  }
+
+  #contactFormPage .fullWidth {
+    flex-direction: row;
+  }
 }
 
 /*funciona desde los 992px*/
@@ -967,6 +1191,11 @@ footer aside i.bx {
   header #mainNav .menu li a {
     font-size: 1.3em;
     line-height: 2em;
+  }
+  #contactFormPage .columnCentered,
+  #contactFormPage .fullWidth
+   {
+    flex-direction: row;
   }
 }
 
