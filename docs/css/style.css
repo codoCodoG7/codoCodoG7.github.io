@@ -1086,6 +1086,94 @@ header.menuPage .row.subHeader {
   }
 }
 
+/* menu premium*/
+header.menuPagePremium {
+  background-image: url(/images/menu/premium.jpeg);
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+header.menuPageClassic {
+  background-image: url(/images/menu/classic.jpg);
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+header.menuPageExtra {
+  background-image: url(/images/menu/extras.jpeg);
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.menuPageItems .fullWidth {
+  display: flex;
+}
+
+#menuItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+#menuItems .itemContainer {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+#menuItems .itemContainer .burgerTitle {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  text-align: left;
+  /*grid-column: 1 / span 4;*/
+  grid-area: 1 / 1 / 3 / -3;
+}
+#menuItems .itemContainer img {
+  width: 100%;
+  grid-area: 1/-3/3/-1;
+}
+#menuItems .itemContainer .burgerPrice {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: right;
+  grid-area: 3 / -3 / 3 / -1;
+}
+#menuItems .itemContainer .burgerDesc {
+  margin-bottom: 0px;
+  font-size: 1.2rem;
+  text-align: left;
+  grid-area: 3 / 1 / 3 / -3;
+}
+.itemContainer#cloneMenuItem{
+  display: none;
+}
+div.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 200px;
+  flex-direction: column;
+}
+div.loading h3{
+  font-size: 1.5em;
+}
+div.loading i.bx.customRed{
+background-color: transparent;
+color: #b5121b;
+font-size: 3em;
+display: block;
+}
+div.loading .message{
+  font-size: 1.2em;
+}
+@media screen and (max-width: 768px) {
+  #menuItems {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*******************************/
 /*footer*/
 footer {
