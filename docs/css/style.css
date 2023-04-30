@@ -766,7 +766,9 @@ section#menuItems div.itemContainer.rotation.active {
   color: #4a4a4a;
   font-weight: bold;
 }
-
+.backFace h3{
+  padding: 13px 0;
+}
 #contactFormPage section.rotation.active .backFace,
 section#menuItems div.itemContainer.rotation.active .backFace {
   opacity: 1;
