@@ -311,13 +311,11 @@ main {
   overflow: hidden;
 }
 
-
 .imgBox {
   position: relative;
   color: #f1f1f1;
   height: 100%;
 }
-
 
 .txtBox {
   padding: 40px;
@@ -345,13 +343,13 @@ main {
 
 .customBlue,
 #contactFormPage .customBlue:not(div.separatorLine),
-.customBlue.sendButton{
+.customBlue.sendButton {
   background-color: #1e273f;
   color: #f1f1f1;
 }
 
 .customRed,
-#contactFormPage .customRed:not(div.separatorLine):not(.bx.customRed){
+#contactFormPage .customRed:not(div.separatorLine):not(.bx.customRed) {
   background-color: #b5121b;
   color: #f1f1f1;
 }
@@ -642,8 +640,6 @@ div.txtBox.customBlue .separatorLine::before {
   align-items: center;
 }
 
-
-
 .listingProperties ul li .bx {
   font-size: 4em;
   color: #b5121b;
@@ -718,7 +714,8 @@ div.txtBox.customBlue .separatorLine::before {
 #infoPage .section {
   padding: 15px;
 }
-#contactFormPage section.rotation, section#menuItems div.itemContainer.rotation {
+#contactFormPage section.rotation,
+section#menuItems div.itemContainer.rotation {
   position: relative;
 
   -webkit-transform-style: preserve-3d;
@@ -729,7 +726,8 @@ div.txtBox.customBlue .separatorLine::before {
   transition: transform 0.5s ease-in-out;
 }
 
-#contactFormPage section.rotation.active, section#menuItems div.itemContainer.rotation.active {
+#contactFormPage section.rotation.active,
+section#menuItems div.itemContainer.rotation.active {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
@@ -769,7 +767,8 @@ div.txtBox.customBlue .separatorLine::before {
   font-weight: bold;
 }
 
-#contactFormPage section.rotation.active .backFace, section#menuItems div.itemContainer.rotation.active .backFace {
+#contactFormPage section.rotation.active .backFace,
+section#menuItems div.itemContainer.rotation.active .backFace {
   opacity: 1;
 }
 
@@ -1145,10 +1144,10 @@ header.menuPageExtra {
   text-align: left;
   grid-area: 3 / 1 / 3 / -3;
 }
-.itemContainer#cloneMenuItem{
+.itemContainer#cloneMenuItem {
   display: none;
 }
-div.loading{
+div.loading {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1156,16 +1155,16 @@ div.loading{
   min-height: 200px;
   flex-direction: column;
 }
-div.loading h3{
+div.loading h3 {
   font-size: 1.5em;
 }
-div.loading i.bx.customRed{
-background-color: transparent;
-color: #b5121b;
-font-size: 3em;
-display: block;
+div.loading i.bx.customRed {
+  background-color: transparent;
+  color: #b5121b;
+  font-size: 3em;
+  display: block;
 }
-div.loading .message{
+div.loading .message {
   font-size: 1.2em;
 }
 @media screen and (max-width: 768px) {
@@ -1375,7 +1374,7 @@ footer aside i.bx {
   #infoPage .columnCentered,
   #infoPage > div.fullWidth,
   .menuPageItems .columnCentered,
-  .menuPageItems .fullWidth{
+  .menuPageItems .fullWidth {
     flex-direction: column;
   }
   #infoPage .columnCentered {
@@ -1384,7 +1383,7 @@ footer aside i.bx {
   #infoPage section {
     width: 100%;
   }
-} 
+}
 /*works from 576px*/
 @media only screen and (min-width: 576px) {
   * {
@@ -1439,7 +1438,7 @@ footer aside i.bx {
     text-shadow: 0 5px 12px rgba(0, 0, 0, 0.8);
   }
 
-   header {
+  header {
     background-size: cover;
     background-position: 50% -300px;
   }
@@ -1481,8 +1480,15 @@ footer aside i.bx {
     line-height: 2em;
   }
   #contactFormPage .columnCentered,
-  #contactFormPage .fullWidth
-   {
+  #contactFormPage .fullWidth,
+  #infoPage .columnCentered,
+  #infoPage > div.fullWidth {
+    flex-direction: row;
+  }
+  #infoPage .columnCentered {
+    width: 70%;
+  }
+  .menuPageItems .fullWidth {
     flex-direction: row;
   }
 }
