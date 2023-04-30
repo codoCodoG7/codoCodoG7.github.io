@@ -299,10 +299,6 @@ header h1.pattern {
   padding-right: 5px;
 }
 
-main {
-  /*padding: 0 40px;*/
-}
-
 /*Flex items*/
 .imgText_flex {
   display: flex;
@@ -1392,10 +1388,6 @@ footer aside i.bx {
     font-size: 14px;
   }
 
-  body {
-    /*background-color: aqua;*/
-  }
-
   .big-title {
     width: 100%;
   }
@@ -1497,9 +1489,6 @@ footer aside i.bx {
 
 /*funciona desde los 1200px*/
 @media only screen and (min-width: 1200px) {
-  body {
-  }
-
   header #mainNav .menu li a {
     font-size: 1.3em;
     line-height: 1.3em;
