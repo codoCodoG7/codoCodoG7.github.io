@@ -588,7 +588,7 @@ div.txtBox.customBlue .separatorLine::before {
 }
 
 .columnCentered .details {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 2em;
   color: #4a4a4a;
   text-align: justify;
@@ -958,7 +958,7 @@ input#cTerms {
 }
 #infoPage .details ul li {
   list-style: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 #infoPage .details ul li ul > li {
@@ -1183,7 +1183,7 @@ footer {
 
 p#copyRight {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 p#copyRight span {
@@ -1210,7 +1210,7 @@ footer aside {
 
 footer a {
   color: #aaaaaa;
-  font-size: 0.7em;
+  font-size: 0.9em;
   width: 100%;
   display: block;
 }
