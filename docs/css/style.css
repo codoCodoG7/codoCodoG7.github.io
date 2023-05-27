@@ -335,7 +335,16 @@ header h1.pattern {
 .flexEven {
   flex: 50%;
 }
-
+.flexTitleDetails.centered p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  text-align: justify;
+  margin: 2px 0;
+}
+.flexTitleDetails.centered p.bold{
+  margin: 5px 0;
+  font-weight: bold;
+}
 .customBlue,
 #contactFormPage .customBlue:not(div.separatorLine),
 .customBlue.sendButton {
