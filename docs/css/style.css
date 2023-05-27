@@ -1190,12 +1190,13 @@ footer {
 }
 
 p#copyRight {
+  margin: 10px 0 0;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 p#copyRight span {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 footer .footerNav {
@@ -1204,13 +1205,14 @@ footer .footerNav {
 }
 
 footer nav {
-  padding: 0 34px;
+  padding: 0 24px;
   display: flex;
+  flex-wrap: wrap;
   width: 50%;
 }
 
 footer aside {
-  padding: 0 34px;
+  padding: 0 24px;
   flex-direction: column;
   display: flex;
   width: 200px;
@@ -1218,7 +1220,8 @@ footer aside {
 
 footer a {
   color: #aaaaaa;
-  font-size: 0.9em;
+  font-size: 1.1em;
+  line-height: 2.2em;
   width: 100%;
   display: block;
 }
@@ -1227,7 +1230,7 @@ footer nav ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 10px;
+  padding: 0;
   /* width: 100%; */
 }
 footer nav ul:nth-child(1) {
