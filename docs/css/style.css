@@ -321,17 +321,16 @@ header h1.pattern {
 }
 
 .txtBox.flexWide {
-  width: 65%;
-  flex: 1 3 65%;
+  flex: 1 3 ;
 }
 
-.imgBox.flexWide {
-  flex: 65%;
+.imgBox.flexWide,.txtBox.flexWide {
+  flex: 60%;
 }
-
-.txtBox.flexNarrow {
-  flex: 35%;
+.imgBox.flexNarrow,.txtBox.flexNarrow {
+  flex: 40%;
 }
+ 
 
 .flexEven {
   flex: 50%;
